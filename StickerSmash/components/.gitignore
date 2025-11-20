@@ -1,28 +1,43 @@
-import { Pressable, StyleSheet, Text } from 'react-native';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-type Props = {
-  icon: keyof typeof MaterialIcons.glyphMap;
-  label: string;
-  onPress: () => void;
-};
+# dependencies
+node_modules/
 
-export default function IconButton({ icon, label, onPress }: Props) {
-  return (
-    <Pressable style={styles.iconButton} onPress={onPress}>
-      <MaterialIcons name={icon} size={24} color="#fff" />
-      <Text style={styles.iconButtonLabel}>{label}</Text>
-    </Pressable>
-  );
-}
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
 
-const styles = StyleSheet.create({
-  iconButton: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  iconButtonLabel: {
-    color: '#fff',
-    marginTop: 12,
-  },
-});
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+app-example
+
+# generated native folders
+/ios
+/android
